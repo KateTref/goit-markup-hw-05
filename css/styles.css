@@ -49,24 +49,24 @@ img {
 .head {
  border-bottom: 1px solid var(--line-color);
  padding-top: 24px;
- padding-bottom: 24px;
+ /* padding-bottom: 24px; */
 }
 .header-container {
  display: flex;
- align-items: center;
+ align-items: flex-start;
 }
 .nav {
  display: flex;
- align-items: center;
+ align-items: flex-start;
 }
 .list-nav {
  display: flex;
  align-items: center;
+ padding-top: 9px;
 }
 .list-item {
  list-style: none;
 }
-
 .list-nav > .list-item:not(:last-child) {
  margin-right: 50px;
 }
@@ -100,16 +100,25 @@ img {
  line-height: 1.14;
  letter-spacing: 0.02em;
  color: var(--primary-text-color);
+ align-items: flex-start;
 }
 .list-nav .link.current {
  color: var(--accent-color);
+}
+.link.current::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  display: block;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  margin-top: 28px;
 }
 .envelope,
 .smartphone {
  margin-right: 10px;
  fill: currentColor;
 }
-
 .contacts-head {
  display: flex;
  color: var(--secondary-text-color);
@@ -121,6 +130,7 @@ img {
 .contacts {
  display: flex;
  margin-left: auto;
+ padding-top: 9px;
 }
 .contacts-head:not(:last-child) {
  margin-right: 50px;
@@ -231,9 +241,30 @@ img {
  margin-bottom: 50px;
 }
 .card-work {
+ position: relative;
  margin-left: 30px;
  margin-top: 30px;
  flex-basis: calc((100% - 90px) / 3);
+}
+.card-work-text {
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+}
+.text-work {
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--white-color);
 }
 .team {
  background-color: var(--btn-nav-color);
