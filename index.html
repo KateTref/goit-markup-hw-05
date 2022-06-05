@@ -50,7 +50,7 @@
         <h1 class="hero-title">
           Эффективные решения <span class="indent">для вашего бизнеса</span>
         </h1>
-        <button class="hero-btn" type="button">Заказать услугу</button>
+        <button data-modal-open class="hero-btn" type="button">Заказать услугу</button>
       </div>
     </section>
 
@@ -393,6 +393,12 @@
       </div>
     </div>
   </footer>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="close-modal" data-modal-close>&#10006</button>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>
